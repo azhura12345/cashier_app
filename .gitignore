@@ -1,5 +1,16 @@
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.sqlite3
+*.db
+
+# Environments
 .venv/
 .env
-*.db
+
+# Qt Designer
+*.ui~
+
+# VSCode & system files
+.vscode/
+.DS_Store
