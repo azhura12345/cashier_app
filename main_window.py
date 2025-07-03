@@ -1,7 +1,7 @@
 # /cashier_app/main_window.py
 from PyQt5 import QtWidgets, QtGui
 from ui.main_ui import Ui_MainWindow
-from ui.product_ui import Ui_layoutProduct
+from ui.product_item_ui import Ui_layoutProduct
 from ui.order_detail_ui import Ui_OrderDetailWidget
 from ui.order_item_ui import Ui_orderItemWidget
 from models.product import get_products_by_category
