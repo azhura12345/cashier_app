@@ -1,5 +1,3 @@
-# /widgets/product_item.py
-
 from PyQt5 import QtWidgets, QtGui
 from ui.product_item_ui import Ui_ProductItem
 import os
@@ -12,8 +10,6 @@ class ProductItemWidget(QtWidgets.QWidget):
 
         self.ui.namePrdLabel.setText(product["name"])
         self.ui.priceLabelItem.setText(f"${product['price']:.2f}")
-
-        print(f"[DEBUG] Membuat widget untuk produk: {product['name']}")
 
         if product["discount"]:
             self.ui.discLabelItem.setVisible(True)
@@ -37,10 +33,6 @@ class ProductItemWidget(QtWidgets.QWidget):
                 pixmap = QtGui.QPixmap(full_path)
                 if not pixmap.isNull():
                     self.ui.imagePrd.setPixmap(pixmap)
-                else:
-                    print("[WARNING] Image failed to load:", full_path)
-            else:
-                print("[WARNING] Image file not found:", full_path)
 
         if add_to_cart_callback:
             self.ui.addCartButton.clicked.connect(lambda: add_to_cart_callback(product))

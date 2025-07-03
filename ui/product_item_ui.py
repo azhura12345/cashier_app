@@ -1,15 +1,17 @@
 # /cashier_app/ui/product_item_ui.py
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Ui_layoutProduct(object):
-    def setupUi(self, layoutProduct):
-        layoutProduct.setObjectName("layoutProduct")
-        layoutProduct.resize(368, 336)
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(layoutProduct)
+class Ui_ProductItem(object):
+    def setupUi(self, ProductItem):
+        ProductItem.setObjectName("ProductItem")
+        ProductItem.resize(368, 336)
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(ProductItem)
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.widget = QtWidgets.QWidget(layoutProduct)
+        self.widget = QtWidgets.QWidget(ProductItem)
         self.widget.setStyleSheet("*{\n"
-"    background-color:#ffffff;\n"
+"    background:#ffffff;\n"
 "    font-family:Segoe UI;\n"
 "}\n"
 "\n"
@@ -268,19 +270,19 @@ class Ui_layoutProduct(object):
         self.verticalLayout.addWidget(self.frameProduct)
         self.verticalLayout_2.addWidget(self.widget)
 
-        self.retranslateUi(layoutProduct)
-        QtCore.QMetaObject.connectSlotsByName(layoutProduct)
+        self.retranslateUi(ProductItem)
+        QtCore.QMetaObject.connectSlotsByName(ProductItem)
 
-    def retranslateUi(self, layoutProduct):
+    def retranslateUi(self, ProductItem):
         _translate = QtCore.QCoreApplication.translate
-        layoutProduct.setWindowTitle(_translate("layoutProduct", "Form"))
-        self.stockOffLabelDisc.setText(_translate("layoutProduct", "- 30%"))
-        self.stockOffLabel.setText(_translate("layoutProduct", "New"))
-        self.namePrdLabel.setText(_translate("layoutProduct", "Dinning Chair"))
-        self.wLabel.setText(_translate("layoutProduct", "W : 120"))
-        self.dLabel.setText(_translate("layoutProduct", "D : 40"))
-        self.hLabel.setText(_translate("layoutProduct", "H : 110"))
-        self.discLabelItem.setText(_translate("layoutProduct", "$50"))
-        self.priceLabelItem.setText(_translate("layoutProduct", "$30"))
-        self.inStockLabel.setText(_translate("layoutProduct", "In Stock"))
-        self.addCartButton.setText(_translate("layoutProduct", "Add to Cart"))
+        ProductItem.setWindowTitle(_translate("ProductItem", "Form"))
+        self.stockOffLabelDisc.setText(_translate("ProductItem", "- 30%"))
+        self.stockOffLabel.setText(_translate("ProductItem", "New"))
+        self.namePrdLabel.setText(_translate("ProductItem", "Dinning Chair"))
+        self.wLabel.setText(_translate("ProductItem", "W : 120"))
+        self.dLabel.setText(_translate("ProductItem", "D : 40"))
+        self.hLabel.setText(_translate("ProductItem", "H : 110"))
+        self.discLabelItem.setText(_translate("ProductItem", "$50"))
+        self.priceLabelItem.setText(_translate("ProductItem", "$30"))
+        self.inStockLabel.setText(_translate("ProductItem", "In Stock"))
+        self.addCartButton.setText(_translate("ProductItem", "Add to Cart"))
