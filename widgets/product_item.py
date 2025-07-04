@@ -1,11 +1,11 @@
 from PyQt5 import QtWidgets, QtGui
-from ui.product_item_ui import Ui_ProductItem
+from ui.product_ui import Ui_layoutProduct
 import os
 
 class ProductItemWidget(QtWidgets.QWidget):
     def __init__(self, product, add_to_cart_callback=None):
         super().__init__()
-        self.ui = Ui_ProductItem()
+        self.ui = Ui_layoutProduct()
         self.ui.setupUi(self)
 
         print(f"[WIDGET] Produk: {product['name']}")

@@ -1,15 +1,17 @@
-# /models/product.py
-from services.db import get_connection
+# /cashier_app/models/product.py
 
-def get_products_by_category(category_id):
-    conn = get_connection()
-    cursor = conn.cursor()
-    cursor.execute("""
-        SELECT id, name, price, discount, stock, image_path, width, depth, height 
-        FROM products
-        WHERE category_id = %s
-    """, (category_id,))
-    rows = cursor.fetchall()
-    columns = [desc[0] for desc in cursor.description]
-    conn.close()
-    return [dict(zip(columns, row)) for row in rows]
+from services.db import fetch_all
+
+def get_all_products():
+    query = "SELECT * FROM products ORDER BY id"
+    return fetch_all(query)
+
+def get_products_by_category(category_name):
+    query = """
+        SELECT p.*
+        FROM products p
+        JOIN categories c ON p.category_id = c.id
+        WHERE c.name = %s
+        ORDER BY p.id
+    """
+    return fetch_all(query, (category_name,))
